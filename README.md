@@ -10,6 +10,10 @@ The file run_analysis.R contains the following main functions. Each of them perf
  * label - Appropriately labels the data set with descriptive variable names. First, reads features list file (features.txt); selects just the features that end with "-mean()" or "-std()". Transforms these sufixes to "Mean" and "Std", respectively. Then sets these names to the first columns of the given data frame, that must match (just as function extract returns).
  * summ - From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject. This is easily done with functions group_by and summarise from package dplyr. The given data set must contain columns named just as function label does).
 
-## Pre-requisites
+## How to run
+
+Just execute run_analysis.R as a R script file.
+
+### Pre-requisites
 
 The directory called "UCI HAR Dataset" must be on the working directory.
