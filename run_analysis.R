@@ -24,8 +24,8 @@ merge = function() {
     names(df_train_subject)  = 'subject'
     names(df_test_activity)  = 'activity'
     names(df_test_subject)   = 'subject'
-    df_train = cbind(df_train_features, subject = df_train_subject, activity = df_train_activity)
-    df_test  = cbind( df_test_features, subject = df_test_subject,  df_test_activity)
+    df_train = cbind(df_train_features, df_train_subject, df_train_activity)
+    df_test  = cbind( df_test_features, df_test_subject,  df_test_activity)
     # Append data frames
     rbind(df_train, df_test)
 }
@@ -76,5 +76,3 @@ summ = function(df) {
         fBodyBodyGyroJerkMagStd = mean(fBodyBodyGyroJerkMagStd)
     )
 }
-
-summ(label(adjust_activities(extract(merge()))))
